@@ -1,2 +1,7 @@
 Arana, se voce consegue ler isso me responda por um commit.
+<<<<<<< HEAD
 Salve to aqui
+=======
+Beleza..?
+>>>>>>> f5b4e0f4d2fdf5e14e9c20b209b04ac4398a83d1
+To aqui seu barbaduque
