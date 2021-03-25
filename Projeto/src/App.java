@@ -10,17 +10,34 @@ public class App {
 			switch (resp) {
             case "1":
             Object[] options = {"Gerente", "Vendedor"};
-                    JOptionPane.showOptionDialog(null, "Cadastro de gerente ou vendedor?", "Cadastrar Empregado", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,null,options, options[0]);
+            int aux =  JOptionPane.showOptionDialog(null, "Cadastro de gerente ou vendedor?", "Cadastrar Empregado", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,null,options, options[0]);
+                //TODO
 				break;
 			case "2":
+            //TODO
+            String nome = "nome";
+            String cpf = "123";
+            double valorDaDivida = 1000;
+           // CadastrarCliente(nome,cpf,valorDaDivida);
 				break;
 			case "3":
+            //TODO
+            cpf = "123";
+           // Pesquisar(cpf);
 				break;
             case "4":
+            //TODO
+           // ListarEmpregados();
 				break;
 			case "5":
+            /* TODO
+                ListarClientes();
+            */
 				break;
 			case "6":
+            /*TODO
+                Remover(cpf);
+                */
                 break;
             case "7":
 				break;
@@ -28,9 +45,8 @@ public class App {
 				JOptionPane.showMessageDialog(null, "Opção inválida. Se informe!");
 			}
 		} while (resp.equals("1") || resp.equals("2") || resp.equals("3") || resp.equals("4")|| resp.equals("5") ||  resp.equals("6")|| resp.equals("7")|| resp.contentEquals(null));
-
     }
-
+    
     ArrayList<Pessoa> dados = new ArrayList();
 
     public void CadastrarEmpregado(String nome, String cpf, String matricula) {
