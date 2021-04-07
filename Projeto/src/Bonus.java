@@ -1,3 +1,3 @@
 public interface Bonus {
-    double calcularBonus();
+    double CalcularBonus();
 }
