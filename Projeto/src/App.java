@@ -85,8 +85,7 @@ public class App {
     }
 
     public static void Pesquisar(String cpf) {
-        int n = dados.size();
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < dados.size(); i++) {
             if (dados.get(i).cpf.equals(cpf)) {
                 JOptionPane.showMessageDialog(null, dados.get(i) + "\nEsta pessoa é um " + dados.get(i).getClass());
                 return;
