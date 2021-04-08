@@ -88,7 +88,7 @@ public class App {
         int n = dados.size();
         for (int i = 0; i < n; i++) {
             if (dados.get(i).cpf.equals(cpf)) {
-                JOptionPane.showMessageDialog(null, dados.get(i)+"\nEsta pessoa é um " + dados.get(i).getClass());
+                JOptionPane.showMessageDialog(null, dados.get(i) + "\nEsta pessoa é um " + dados.get(i).getClass());
                 return;
             }
         }
@@ -97,11 +97,11 @@ public class App {
 
     public static String ListarEmpregados() {
         int n = dados.size();
-        Empregado aux = new Empregado ();
+        Empregado aux = new Empregado();
         String impressao = "";
         for (int i = 0; i < n; i++) {
             if (aux.getClass() == dados.get(i).getClass().getSuperclass()) {
-            
+
                 impressao += "\n" + dados.get(i).toString();
             }
         }
@@ -109,10 +109,9 @@ public class App {
     }
 
     public static String ListarClientes() {
-        int n = dados.size();
         Cliente aux = new Cliente();
         String impressao = "";
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < dados.size(); i++) {
             if (dados.get(i).getClass().equals(aux.getClass())) {
                 impressao += "\n" + dados.get(i).toString();
             }
@@ -121,10 +120,18 @@ public class App {
     }
 
     public static void Remover(String cpf) {
-        int n = dados.size();
-        for (int i = 0; i < n; i++) {
-            JOptionPane.showMessageDialog(null, "Pessoa deletada!");
-            dados.remove(i);
+        for (int i = 0; i < dados.size(); i++) {
+            if (dados.get(i).cpf.equals(cpf)) {
+                int ctz = JOptionPane.showConfirmDialog(null, "Tem certeza?", "Tem certeza?",
+                        JOptionPane.YES_NO_OPTION);
+                if (ctz != 0) {
+                    JOptionPane.showMessageDialog(null, "Operação cancelada");
+                    return;
+                }
+                JOptionPane.showMessageDialog(null, "Pessoa deletada!");
+                dados.remove(i);
+                return;
+            }
         }
         JOptionPane.showMessageDialog(null, "Cpf não encontrado...");
     }
