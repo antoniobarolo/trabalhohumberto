@@ -49,7 +49,7 @@ public class App {
 
     public static void CadastrarEmpregado(String nome, String cpf, String matricula) {
         Object[] itens = { "Gerente", "Vendedor" };
-        Object tipo = JOptionPane.showInputDialog(null, "Para cliente ou vendedor?", null,
+        Object tipo = JOptionPane.showInputDialog(null, "Para gerente ou vendedor?", null,
                 JOptionPane.INFORMATION_MESSAGE, null, itens, itens[0]);
         if (tipo == "Gerente") {
             Gerente novo = new Gerente();
